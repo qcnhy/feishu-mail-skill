@@ -1,0 +1,4 @@
+references/
+scripts/config.local.js
+*.png
+*.json.bak
