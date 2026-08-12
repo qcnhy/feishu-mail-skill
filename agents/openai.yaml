@@ -1,6 +1,8 @@
 interface:
-  display_name: "飞书邮件助手"
-  short_description: "浏览飞书邮箱并按个人规范起草邮件"
-  default_prompt: "Use $feishu-mail-assistant to browse my Feishu Mail inbox, open and read a specific mail, then draft a reply following my email conventions."
+  display_name: "飞书邮箱助手 (Mac)"
+  short_description: "Browse Feishu Mail in Edge and draft replies on macOS"
+  default_prompt: "Use $feishu-mail-mac to browse my Feishu Mail inbox in Edge, read emails, and draft replies."
+
 policy:
   allow_implicit_invocation: true
+
