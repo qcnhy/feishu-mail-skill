@@ -2,3 +2,5 @@ references/
 scripts/config.local.js
 *.png
 *.json.bak
+SKILL_OLD_EDGE.md
+SKILL.md.bak-*
