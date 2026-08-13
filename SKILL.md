@@ -125,8 +125,22 @@ Delete downloaded files from ~/Downloads/ after reading.
 
 ## Drafting Email Replies
 
-Drafting conventions are per-user. Use neutral professional Chinese email
-style if no conventions are available. The skill never sends mail.
+Provide reply text in chat unless the user explicitly asks to create a draft
+in Feishu Mail. The skill never sends mail.
+
+For the user's security-operation and vulnerability-response emails, use this
+format:
+
+```text
+安全运营团队：
+您好，<系统/项目>未使用<产品或组件>，不涉及相关漏洞。
+
+感谢支持！
+```
+
+Do not use the generic salutation “各位好” or the closing “谢谢” for these
+responses. For other mail, use neutral professional Chinese style unless the
+user supplies a different convention.
 
 ## Privacy and Safety
 
