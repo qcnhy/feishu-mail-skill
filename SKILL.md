@@ -32,6 +32,15 @@ locators after connecting via the Browser skill.
 Reuse globalThis.agent, globalThis.edge and globalThis.mailTab across turns
 unless stale. See scripts/feishu_mail.mjs for reusable helper functions.
 
+### Recovering a stalled mailbox tab
+
+Before retrying a mailbox operation after a timeout, wake and focus the live
+Feishu tab: name the browser session, call `browser.user.openTabs()`, find the
+tab whose URL contains `feishu.cn/mail`, and claim that fresh tab object. Verify
+its title or URL before listing mail; never run a list operation on a stale tab
+binding. If claiming the fresh tab still times out, retry the recovery once and
+then tell the user that the browser tab did not respond.
+
 ## Workflow
 
 ### 1. List mails in the current folder
