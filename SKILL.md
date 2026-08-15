@@ -154,6 +154,12 @@ requested actions and deadline. Do not prepare a forwarding email for
 customer-owned, asset-owner-owned, or other externally managed items: their
 owners receive the original notice; summarize them as out of scope instead.
 
+For an email that requires a final external response, track the workflow as:
+identify the actual owner → provide the internal coordination text for that
+owner → record the requested action, deadline, and pending status → use the
+returned conclusion to prepare the final reply. Do not claim the external item
+is complete merely because a coordination request has been drafted or sent.
+
 ## Privacy and Safety
 
 - Only operate the Feishu Mail tab the user explicitly points at.
