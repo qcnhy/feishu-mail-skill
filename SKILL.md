@@ -133,14 +133,26 @@ format:
 
 ```text
 安全运营团队：
-您好，<系统/项目>未使用<产品或组件>，不涉及相关漏洞。
 
-感谢支持！
+　　您好，<系统/项目>未使用<产品或组件>，不涉及相关漏洞。
+
+　　感谢支持！
 ```
 
 Do not use the generic salutation “各位好” or the closing “谢谢” for these
-responses. For other mail, use neutral professional Chinese style unless the
-user supplies a different convention.
+responses. Use a full-width two-character indent (`　　`) at the start of every
+body paragraph. For other mail, use neutral professional Chinese style unless
+the user supplies a different convention.
+
+For endpoint-update reports, preserve the sender's required reporting schema;
+for example: `ZSJ-XX共XX人，共XX台终端，已更新XX台，未完成更新的原因及预计完成时间。`
+
+For internal coordination or forwarding emails, provide copyable text only and
+address only the team responsible for the item. Start with a concise background
+such as `您好，接局方通报的隐患排查清单，烦请<责任团队>……` before listing the
+requested actions and deadline. Do not prepare a forwarding email for
+customer-owned, asset-owner-owned, or other externally managed items: their
+owners receive the original notice; summarize them as out of scope instead.
 
 ## Privacy and Safety
 
