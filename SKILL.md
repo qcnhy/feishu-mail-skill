@@ -155,6 +155,26 @@ Delete downloaded files from ~/Downloads/ after reading.
 Provide reply text in chat unless the user explicitly asks to create a draft
 in Feishu Mail. The skill never sends mail.
 
+### Security-operations warning workflow
+
+For an 安管预警/漏洞排查邮件, use this fixed handoff flow:
+
+1. Read the original notice and give the user a concise summary: vulnerability
+   or issue, affected scope/version when supplied, feedback deadline, required
+   evidence or form, and the actual owner to investigate.
+2. Do **not** infer an impact conclusion from the notice or send a reply. Wait
+   for the user's code-engineer investigation result (or another verified
+   owner conclusion).
+3. Use that conclusion to prepare the final response. When the user explicitly
+   authorizes drafting in Feishu, click **回复** (never 回复全部), populate a
+   draft addressed to the original security-operations sender, retain the
+   automatic signature, and verify the body and recipient on screen.
+4. Stop at the visible **发送** button. The user alone reviews and clicks
+   send; never click it or otherwise transmit the reply.
+
+Keep the item pending until the user confirms it has been sent or directs a
+different disposition.
+
 For the user's security-operation and vulnerability-response emails, use this
 format:
 
