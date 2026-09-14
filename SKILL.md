@@ -162,10 +162,13 @@ For an 安管预警/漏洞排查邮件, use this fixed handoff flow:
 1. Read the original notice and give the user a concise summary: vulnerability
    or issue, affected scope/version when supplied, feedback deadline, required
    evidence or form, and the actual owner to investigate.
-2. Do **not** infer an impact conclusion from the notice or send a reply. Wait
-   for the user's code-engineer investigation result (or another verified
-   owner conclusion).
-3. Use that conclusion to prepare the final response. When the user explicitly
+2. Do **not** infer an impact conclusion from the notice or send a reply. When
+   the user asks to involve the code/security engineer, hand off only the
+   product or component, deadline, and requested verification scope. Ask that
+   engineer to return a concise, evidence-based conclusion; do not ask them to
+   draft the external reply. Wait for that verified owner conclusion.
+3. The mail assistant owns the final reply drafting: use the returned conclusion
+   to prepare the final response in the established mail format. When the user explicitly
    authorizes drafting in Feishu, click **回复** (never 回复全部), populate a
    draft addressed to the original security-operations sender, retain the
    automatic signature, and verify the body and recipient on screen.
@@ -200,6 +203,29 @@ such as `您好，接局方通报的隐患排查清单，烦请<责任团队>…
 requested actions and deadline. Do not prepare a forwarding email for
 customer-owned, asset-owner-owned, or other externally managed items: their
 owners receive the original notice; summarize them as out of scope instead.
+
+### Forwarding an original mail in a thread
+
+When the user asks to forward the received/original message in a conversation,
+do not forward the most recent sent reply. Locate the older received-message
+card below it, then use that card's **更多** menu or its own bottom **转发**
+button. The forwarded draft must retain the original attachments and automatic
+signature.
+
+Before stopping at the draft, add the requested coordination message *above*
+the forwarded content, set only the intended responsible recipient, and verify
+all four items on screen: recipient, introductory request, original
+attachments, and signature. Do not use a whole-editor `set_value` operation on
+an auto-signed draft: it can remove the signature. If the signature is lost or
+the wrong message is forwarded, discard that draft and recreate it from the
+correct received-message card.
+
+### Default CC rule
+
+For internal coordination or forwarding mail, normally CC both `曹源
+(caoyuanit@chinamobile.com)` and `TMSY-内部实施沟通群`. The sole default
+exception is a mail addressed directly to 曹老师: do not CC him to that same
+mail. Apply a different CC list only when the user explicitly directs it.
 
 For an email that requires a final external response, track the workflow as:
 identify the actual owner → provide the internal coordination text for that
